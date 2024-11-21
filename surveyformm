@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" 
+          content="IE=edge">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <title>
+        Build a Survey Form using HTML and CSS
+    </title>
+
+    <style>
+        
+        
+        body {
+            background: linear-gradient(45deg, #FF6F61, #6A5ACD, #FFD700, #32CD32);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            font-family: Verdana;
+            text-align: center;
+            margin: 0;
+            height: 100vh;
+            color: #fff;
+        }
+
+        
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        
+        form {
+            background-color: #fff;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        
+        .form-control {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+
+        
+        .form-control label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        
+        
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 95%;
+            color: #333;
+        }
+
+        
+        button and Checkbox */
+        .form-control input[type="radio"],
+        .form-control input[type="checkbox"] {
+            display: inline-block;
+            width: auto;
+        }
+
+        
+        button {
+            background-color: #05c46b;
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            font-size: 21px;
+            display: block;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Survey Form for IT Students</h1>
+
+    
+    <form id="form">
+
+        
+        <div class="form-control">
+            <label for="name" id="label-name">
+                Name
+            </label>
+
+            
+            <input type="text" id="name" 
+                   placeholder="Enter your name" />
+        </div>
+
+        <div class="form-control">
+            <label for="email" id="label-email">
+                Email
+            </label>
+
+            
+            <input type="email" id="email" 
+                   placeholder="Enter your email" />
+        </div>
+
+        <div class="form-control">
+            <label for="age" id="label-age">
+                Age
+            </label>
+
+            
+            <input type="text" id="age" 
+                   placeholder="Enter your age" />
+        </div>
+
+        <div class="form-control">
+            <label for="role" id="label-role">
+                Which option best describes you?
+            </label>
+
+            
+            <select name="role" id="role">
+                <option value="student">Student</option>
+                <option value="intern">Intern</option>
+                <option value="professional">Professional</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label>
+                What programming languages are you most comfortable with? (Check all that apply)
+            </label>
+
+            
+            <label for="recommed-1">
+                <input type="radio" id="recommed-1" name="recommed"> Html
+            </label>
+            <label for="recommed-2">
+                <input type="radio" id="recommed-2" name="recommed"> Java
+            </label>
+            <label for="recommed-3">
+                <input type="radio" id="recommed-3" name="recommed"> C++
+            </label>
+        </div>
+
+        <div class="form-control">
+            <label>
+                What challenges have you faced in your IT studies? (Select all that apply)
+            </label>
+
+            
+            <label for="recommed-1">
+                <input type="radio" id="recommed-1" name="recommed"> Difficulty with programming concepts
+            </label>
+            <label for="recommed-2">
+                <input type="radio" id="recommed-2" name="recommed"> Lack of resources (books, software, etc.)
+            </label>
+            <label for="recommed-3">
+                <input type="radio" id="recommed-3" name="recommed"> Lack of support from instructors or peers
+            </label>
+        </div>
+
+        <div class="form-control">
+            <label>Do you have any certifications in IT-related fields?</label>
+            
+            <label for="inp-1">
+                <input type="checkbox" name="inp"> Yes
+            </label>
+            <label for="inp-2">
+                <input type="checkbox" name="inp"> No
+            </label>
+        </div>
+
+        <div class="form-control">
+            <label for="comment">
+                Any comments or suggestions
+            </label>
+
+            
+            <textarea name="comment" id="comment" placeholder="Enter your comment here"></textarea>
+        </div>
+
+        
+        <button type="submit" value="submit">
+            Submit
+        </button>
+    </form>
+</body>
+
+</html>
